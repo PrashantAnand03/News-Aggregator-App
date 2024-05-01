@@ -1,0 +1,66 @@
+asgiref==3.7.2
+beautifulsoup4==4.12.2
+bs4==0.0.1
+certifi==2023.7.22
+charset-normalizer==3.2.0
+Django==3.2.21
+gunicorn==21.2.0
+idna==3.4
+packaging==23.1
+requests==2.31.0
+soupsieve==2.4.1
+sqlparse==0.4.4
+tzdata==2023.3
+urllib3==2.0.4
+
+
+
+<div class="card-footer">
+              <div class="d-flex justify-content-between flex-wrap">
+                <div class="mb-2">
+                  <!-- Copy Button -->
+                  <button 
+                    class="btn btn-secondary btn-sm btn-block"
+                    onclick="copyToClipboard('{{ record.url }}')"
+                  >
+                    Copy
+                  </button>
+                </div>
+
+                <div class="mb-2">
+                  <!-- Report Button -->
+                  <button
+                    class="btn btn-danger btn-sm btn-block"
+                    onclick=" "
+                  >
+                    Report
+                  </button>
+                </div>
+
+                <div class="mb-2">
+                  <!-- Facebook Button -->
+                  <button class="badge badge-primary text-dark p-1">
+                    {% post_to_facebook object_or_url "Facebook" %}
+                  </button>
+                </div>
+
+                <div class="mb-2">
+                  <!-- Whatsapp Button -->
+                  <button class="badge badge-primary text-black p-1">
+                    {% post_to_whatsapp object_or_url "Whatsapp" %}
+                  </button>
+                </div>
+
+                <div class="mb-2">
+                  <!-- Telegram Button -->
+                  <button class="badge badge-primary text-dark p-1">
+                    {% post_to_telegram "New News: " object_or_url "Telegram" %}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>      
