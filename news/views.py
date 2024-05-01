@@ -48,7 +48,7 @@ def news_list(request):
         "object_list": headlines,"currenturl":current_url
     }
 
-    return render(request, "home.html", context)
+    return render(request, "index.html", context)
 
 def statichome(request):
      return render(request, "homestatic.html")
