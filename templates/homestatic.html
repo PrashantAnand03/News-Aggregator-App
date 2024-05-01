@@ -1,7 +1,8 @@
 <!-- loading static -->
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 
 <head>
   <title>News Aggregator</title>
@@ -42,9 +43,7 @@
         <h2 class="display-3 text-white">Onion News Aggregator</h2>
         <div class="dropdown">
           <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Category
-          </button>
+            aria-haspopup="true" aria-expanded="false">Category</button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="{% url 'scrape' name='latest' %}">Latest</a>
             <!-- url - 127.0.0.1:8000/scrape/latest -->
@@ -55,9 +54,7 @@
             <a class="dropdown-item" href="{% url 'scrape' name='breaking-news' %}">Breaking News</a>
           </div>
         </div>
-        <button class="btn btn-warning btn-lg btn-block m-4 p-2" onclick="themeChange()">
-          dark-mode
-        </button>
+        <button class="btn btn-warning btn-lg btn-block m-4 p-2" onclick="themeChange()">dark-mode</button>
       </center>
     </div>
 

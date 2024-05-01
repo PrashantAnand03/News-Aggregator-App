@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 
 <head>
   <title>News Aggregator</title>
@@ -22,7 +23,9 @@
   <nav>
       <ul class='nav-bar'>
           <li class='logo bod'><img src="../assets/images/News.png" alt="News Aggregator Brand-logo"></li>
-          <input type='checkbox' id='check' />
+          <label for="check"></label>
+          <input type="checkbox" id="check" placeholder="Checkbox Placeholder">
+
           <span class="menu">
               <li><a href="http://127.0.0.1:8000/">Home</a></li>
               <li><a href="{% url 'scrape' name='latest' %}">Latest</a></li>
@@ -71,7 +74,7 @@
       <!-- the following code will be repeated based on how many values are available in object_list -->
       <div class="col-12 col-md-4 col-lg-3">
         <div class="card mb-4">
-          <img class="card-img-top" src="{{ record.image }}" />
+          <img class="card-img-top" src="{{ record.image }}" alt="news related images"/>
           <div class="card-body">
             <h5 class="card-title">
               <a href="{{ record.url }}">{{ record.title|truncatechars:50 }}</a>
@@ -84,9 +87,7 @@
                   <button 
                     class="btn btn-secondary btn-sm btn-block"
                     onclick="copyToClipboard('{{ record.url }}')"
-                  >
-                    Copy
-                  </button>
+                  >Copy</button>
                 </div>
 
                 <div class="mb-2">
@@ -94,30 +95,22 @@
                   <button
                     class="btn btn-danger btn-sm btn-block"
                     onclick=" "
-                  >
-                    Report
-                  </button>
+                  >Report</button>
                 </div>
 
                 <div class="mb-2">
                   <!-- Facebook Button -->
-                  <button class="badge badge-primary text-dark p-1">
-                    {% post_to_facebook object_or_url "Facebook" %}
-                  </button>
+                  <button class="badge badge-primary text-dark p-1">{% post_to_facebook object_or_url "Facebook" %}</button>
                 </div>
 
                 <div class="mb-2">
                   <!-- Whatsapp Button -->
-                  <button class="badge badge-primary text-black p-1">
-                    {% post_to_whatsapp object_or_url "Whatsapp" %}
-                  </button>
+                  <button class="badge badge-primary text-black p-1">{% post_to_whatsapp object_or_url "Whatsapp" %}</button>
                 </div>
 
                 <div class="mb-2">
                   <!-- Telegram Button -->
-                  <button class="badge badge-primary text-dark p-1">
-                    {% post_to_telegram "New News: " object_or_url "Telegram" %}
-                  </button>
+                  <button class="badge badge-primary text-dark p-1">{% post_to_telegram "New News: " object_or_url "Telegram" %}</button>
                 </div>
               </div>
             </div>
