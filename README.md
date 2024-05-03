@@ -6,3 +6,6 @@
 
 
 ![NewsAggregator Application_front](https://github.com/PrashantAnand03/News-Aggregator-App/assets/106450463/637b49d5-860e-4bea-9069-5f0794a3d8c4)
+
+
+![NewsAggregator_news](https://github.com/PrashantAnand03/News-Aggregator-App/assets/106450463/e1eda451-d3e0-45db-9af3-d94b05b4d9e7)
